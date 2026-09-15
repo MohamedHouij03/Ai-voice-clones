@@ -19,9 +19,8 @@ This project trains AI clones of consenting Dreaming French teachers' voices and
 
 ## 🎥 Demo Video
 
-> 🎬 **[placeholder — demo video goes here]**
->
-> _Planned walkthrough: picking a teacher → live French conversation → topic quiz mode → teacher's own video recommendations → generating a replacement narration line in the Sentence Generator._
+[![Demo Video](https://img.youtube.com/vi/fajR3uJ5tgQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=fajR3uJ5tgQ)
+
 
 ---
 
