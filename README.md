@@ -21,7 +21,6 @@ This project trains AI clones of consenting Dreaming French teachers' voices and
 
 [![Demo Video](https://img.youtube.com/vi/fajR3uJ5tgQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=fajR3uJ5tgQ)
 
-
 ---
 
 ## 📖 Table of Contents
