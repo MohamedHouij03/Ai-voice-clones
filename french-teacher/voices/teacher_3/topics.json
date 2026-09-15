@@ -1,0 +1,102 @@
+[
+  {
+    "id": "mannequinat",
+    "label": "Mannequinat et mode",
+    "keywords": ["mannequin", "mode", "défilé", "shooting"],
+    "prompt_hint": "Chloé travaille comme mannequin et aime parler de mode, de shootings et de défilés.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Comment appelle-t-on une personne qui pose pour des photos de mode : un mannequin, ou un cuisinier ?",
+          "expected_answers": ["mannequin", "un mannequin"]
+        },
+        {
+          "question": "Comment dit-on « fashion » en français : la mode, ou la cuisine ?",
+          "expected_answers": ["mode", "la mode"]
+        },
+        {
+          "question": "Aimes-tu la mode : oui, ou non ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  },
+  {
+    "id": "vivre-en-thailande",
+    "label": "Vivre en Thaïlande",
+    "keywords": ["thaïlande", "bangkok", "asie", "expatriée"],
+    "prompt_hint": "Chloé vit en Thaïlande et aime partager son expérience de vie à l'étranger.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "La Thaïlande se trouve en Asie, ou en Europe ?",
+          "expected_answers": ["asie", "l asie", "l'asie"]
+        },
+        {
+          "question": "Comment dit-on « country » en français : un pays, ou une ville ?",
+          "expected_answers": ["pays", "un pays"]
+        },
+        {
+          "question": "Aimerais-tu vivre à l'étranger : oui, ou non ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  },
+  {
+    "id": "streaming",
+    "label": "Streaming",
+    "keywords": ["stream", "streaming", "twitch", "chaîne"],
+    "prompt_hint": "Chloé fait du streaming en ligne et aime raconter son quotidien de streameuse.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Comment appelle-t-on une personne qui diffuse du contenu en direct sur internet : un streameur, ou un boulanger ?",
+          "expected_answers": ["streameur", "streameuse", "un streameur", "une streameuse"]
+        },
+        {
+          "question": "Comment dit-on « live » en français : en direct, ou en retard ?",
+          "expected_answers": ["en direct"]
+        },
+        {
+          "question": "Regardes-tu parfois des streams : oui, ou non ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  },
+  {
+    "id": "jeux-video",
+    "label": "Jeux vidéo",
+    "keywords": ["jeu vidéo", "jeux vidéo", "gaming", "jouer"],
+    "prompt_hint": "Chloé est passionnée de jeux vidéo et aime en discuter.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Comment appelle-t-on une personne qui joue aux jeux vidéo : un joueur, ou un professeur ?",
+          "expected_answers": ["joueur", "joueuse", "gamer", "un joueur", "une joueuse"]
+        },
+        {
+          "question": "Comment dit-on « video game » en français : un jeu vidéo, ou un livre ?",
+          "expected_answers": ["jeu vidéo", "un jeu vidéo"]
+        },
+        {
+          "question": "Aimes-tu les jeux vidéo : oui, ou non ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "vivre-au-canada",
+    "label": "Vivre au Canada",
+    "keywords": ["canada", "canadien", "expatriée"],
+    "prompt_hint": "Amanda vit au Canada et aime partager son expérience de vie là-bas.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Le Canada se trouve en Amérique, ou en Afrique ?",
+          "expected_answers": ["amerique", "amérique", "amérique du nord", "l'amérique du nord"]
+        },
+        {
+          "question": "Comment dit-on « country » en français : un pays, ou une langue ?",
+          "expected_answers": ["pays", "un pays"]
+        },
+        {
+          "question": "Aimerais-tu visiter le Canada : oui, ou non ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  },
+  {
+    "id": "quebec",
+    "label": "Québec",
+    "keywords": ["québec", "québécois", "montréal"],
+    "prompt_hint": "Amanda connaît bien le Québec, sa culture et son accent.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Quelle langue parle-t-on principalement au Québec : le français, ou l'espagnol ?",
+          "expected_answers": ["français", "le français"]
+        },
+        {
+          "question": "Comment dit-on « winter » en français : l'hiver, ou l'été ?",
+          "expected_answers": ["hiver", "l'hiver"]
+        },
+        {
+          "question": "As-tu déjà entendu l'accent québécois : oui, ou non ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  },
+  {
+    "id": "francophonie-canadienne",
+    "label": "Communautés francophones du Canada",
+    "keywords": ["francophone", "francophonie", "communauté"],
+    "prompt_hint": "Amanda aime parler des communautés francophones du Canada, au-delà du Québec.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Comment appelle-t-on une personne qui parle français : un francophone, ou un anglophone ?",
+          "expected_answers": ["francophone", "un francophone", "une francophone"]
+        },
+        {
+          "question": "Comment dit-on « language » en français : une langue, ou un pays ?",
+          "expected_answers": ["langue", "une langue"]
+        },
+        {
+          "question": "Connais-tu d'autres pays où l'on parle français : oui, ou non ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  },
+  {
+    "id": "vie-et-culture-canada",
+    "label": "Vie et culture au Canada",
+    "keywords": ["culture canadienne", "vie au canada", "tradition"],
+    "prompt_hint": "Amanda partage volontiers la vie quotidienne et la culture canadienne.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Quel sport est très populaire au Canada : le hockey, ou le rugby ?",
+          "expected_answers": ["hockey", "le hockey"]
+        },
+        {
+          "question": "Comment dit-on « forest » en français : une forêt, ou une rivière ?",
+          "expected_answers": ["forêt", "une forêt"]
+        },
+        {
+          "question": "Aimes-tu la nature et les grands espaces : oui, ou non ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  }
+]

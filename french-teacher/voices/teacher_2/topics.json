@@ -1,0 +1,77 @@
+[
+  {
+    "id": "jeu-dacteur",
+    "label": "Jeu d'acteur",
+    "keywords": ["acteur", "actrice", "théâtre", "comédie", "tournage"],
+    "prompt_hint": "Clément pratique le jeu d'acteur et aime parler de théâtre, de tournages et de rôles.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Comment appelle-t-on la personne qui joue dans une pièce ou un film : un acteur, ou un chef ?",
+          "expected_answers": ["acteur", "actrice", "un acteur", "une actrice"]
+        },
+        {
+          "question": "Comment dit-on « stage », le lieu où l'on joue, en français : une scène, ou une cuisine ?",
+          "expected_answers": ["scène", "une scène"]
+        },
+        {
+          "question": "Aimerais-tu jouer la comédie un jour : oui, ou non ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  },
+  {
+    "id": "mathematiques",
+    "label": "Mathématiques",
+    "keywords": ["mathématiques", "maths", "calcul", "problème"],
+    "prompt_hint": "Clément aime les mathématiques et peut en discuter avec plaisir.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Combien font deux plus deux : trois, ou quatre ?",
+          "expected_answers": ["quatre", "4"]
+        },
+        {
+          "question": "Comment dit-on « number » en français : un nombre, ou une lettre ?",
+          "expected_answers": ["nombre", "un nombre", "chiffre", "un chiffre"]
+        },
+        {
+          "question": "Aimes-tu les mathématiques : oui, ou non ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  },
+  {
+    "id": "finance",
+    "label": "Finance",
+    "keywords": ["finance", "argent", "économie", "investissement"],
+    "prompt_hint": "Clément s'intéresse à la finance et à l'économie.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Comment appelle-t-on l'endroit où l'on garde son argent : une banque, ou une bibliothèque ?",
+          "expected_answers": ["banque", "une banque"]
+        },
+        {
+          "question": "Comment dit-on « money » en français : l'argent, ou le temps ?",
+          "expected_answers": ["argent", "l'argent"]
+        },
+        {
+          "question": "Aimes-tu parler d'argent et d'économie : oui, ou non ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  }
+]

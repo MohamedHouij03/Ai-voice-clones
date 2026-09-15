@@ -1,0 +1,48 @@
+# --- Chatterbox voice cloning ---
+#
+# IMPORTANT (Windows + CUDA): install torch/torchaudio FIRST, from PyTorch's
+# CUDA index, pinned to an exact version. If you `pip install` this file
+# without doing that first, pip may pull a CPU-only torch build from PyPI
+# and silently disable GPU acceleration. See README.md "Installation" for
+# the exact commands and why this order matters.
+#
+#   pip install torch==2.11.0+cu128 torchaudio==2.11.0+cu128 --index-url https://download.pytorch.org/whl/cu128
+#
+# IMPORTANT: the PyPI release of chatterbox-tts (0.1.7, as of 2026-09) predates
+# Multilingual V3 support (the `t3_model="v3"` parameter and the
+# `t3_mtl23ls_v3.safetensors` checkpoint do not exist in that release -- it
+# only ships the v2 checkpoint). V3 exists only on the GitHub `master` branch.
+# Since this project requires V3, chatterbox-tts is installed directly from
+# source, not from PyPI -- see the sibling ../french-teacher project's README
+# for the full explanation (both projects share the same voice-cloning setup).
+#
+# `spacy-pkuseg` (a transitive dependency, used only for Chinese text
+# segmentation) is intentionally NOT installed: it has no prebuilt wheel for
+# this Python version on Windows and requires a C++ compiler to build from
+# source. Chatterbox's own code wraps its import in try/except ImportError,
+# so it degrades gracefully and is safe to omit.
+#
+# Install order:
+#   1. pip install torch==2.11.0+cu128 torchaudio==2.11.0+cu128 --index-url https://download.pytorch.org/whl/cu128
+#   2. pip install -r requirements.txt
+#   3. pip install "chatterbox-tts @ git+https://github.com/resemble-ai/chatterbox.git@5de7a54aa4e5e2baadb0182dde554908b48b85c2" --no-deps
+
+numpy>=2.0.0
+librosa==0.11.0
+s3tokenizer
+transformers==5.2.0
+diffusers==0.29.0
+resemble-perth @ git+https://github.com/resemble-ai/Perth.git@master
+conformer==0.3.2
+safetensors==0.5.3
+pykakasi==2.3.0
+gradio==6.8.0
+pyloudnorm
+omegaconf
+
+# --- Web backend (generation API + frontend serving) ---
+# No STT, no LLM -- this project only needs Chatterbox and a thin web layer.
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+python-multipart
+python-dotenv

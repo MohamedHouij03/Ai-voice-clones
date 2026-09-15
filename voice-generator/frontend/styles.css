@@ -1,0 +1,190 @@
+:root {
+  /* Same brand palette as the french-teacher project, for visual consistency
+     between the two sibling tools. */
+  --solara: #fa594b;
+  --aegean-blue: #1a3187;
+  --white: #ffffff;
+  --black: #121212;
+
+  --bg: var(--white);
+  --surface: var(--white);
+  --ink: var(--black);
+  --muted: rgba(18, 18, 18, 0.58);
+  --border: rgba(18, 18, 18, 0.1);
+  --accent: var(--solara);
+  --accent-soft: rgba(250, 89, 75, 0.12);
+  --error: var(--solara);
+  --error-bg: rgba(250, 89, 75, 0.12);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.app-header h1 {
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 600;
+  color: var(--aegean-blue);
+}
+
+.header-controls {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.header-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.header-controls select {
+  font-size: 0.95rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2.5rem;
+  gap: 1.5rem;
+}
+
+.error-banner {
+  background: var(--error-bg);
+  color: var(--error);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+}
+
+.script-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.script-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.script-input {
+  width: 100%;
+  min-height: 220px;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: inherit;
+  resize: vertical;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.script-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.char-count {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.generate-button {
+  padding: 0.7rem 1.75rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(250, 89, 75, 0.3);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.generate-button:hover:not(:disabled) { transform: scale(1.03); }
+.generate-button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.result-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  background: rgba(26, 49, 135, 0.05);
+  border: 1px solid var(--border);
+}
+
+.result-area h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--aegean-blue);
+}
+
+.result-area audio {
+  width: 100%;
+}
+
+.result-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.download-link {
+  padding: 0.45rem 1rem;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.85rem;
+}

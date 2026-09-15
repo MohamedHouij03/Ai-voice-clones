@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Professeur de Français IA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-badge" aria-hidden="true">FR</span>
+      <div class="brand-text">
+        <h1>Professeur de Français IA</h1>
+        <p class="tagline">Apprends le français en parlant, pas en mémorisant.</p>
+      </div>
+    </div>
+    <button id="switch-mode-button" class="switch-mode-button" type="button" hidden>Changer de mode</button>
+  </header>
+
+  <!-- Shown first: choose between practice conversation and direct sentence generation. -->
+  <div id="mode-select" class="modal-overlay">
+    <div class="modal-card mode-select-card">
+      <span class="modal-kicker">Bienvenue</span>
+      <h2>Que veux-tu faire ?</h2>
+      <div class="mode-options">
+        <button type="button" class="mode-option" data-mode="practice">
+          <span class="mode-option-icon">🎙️</span>
+          <span class="mode-option-title">Assistant IA</span>
+          <span class="mode-option-desc">Pratique ton français à l'oral avec un professeur IA.</span>
+        </button>
+        <button type="button" class="mode-option" data-mode="generate">
+          <span class="mode-option-icon">✂️</span>
+          <span class="mode-option-title">Générer des phrases</span>
+          <span class="mode-option-desc">Génère une phrase manquante avec une voix clonée, pour le montage vidéo.</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Practice mode: teacher/level picker, hidden until "Assistant IA" is chosen. -->
+  <div id="teacher-modal" class="modal-overlay" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <span class="modal-kicker">Nouvelle session</span>
+      <h2 id="modal-title">Choisis ton professeur</h2>
+      <div id="teacher-cards" class="teacher-cards"></div>
+      <label class="modal-level">
+        Niveau
+        <select id="level-select">
+          <option value="superbeginner">Super débutant</option>
+          <option value="beginner" selected>Débutant</option>
+          <option value="intermediate">Intermédiaire</option>
+          <option value="advanced">Avancé</option>
+        </select>
+      </label>
+      <button id="start-button" class="start-button" type="button" disabled>Commencer la conversation</button>
+    </div>
+  </div>
+
+  <!-- Practice mode: conversation UI (unchanged functionality), hidden until reached. -->
+  <main id="practice-main" class="app-main" hidden>
+    <div id="error-banner" class="error-banner" hidden></div>
+
+    <section id="conversation" class="conversation" aria-live="polite">
+      <div class="empty-state">
+        Choisis ton professeur pour démarrer la conversation.
+      </div>
+    </section>
+
+    <section id="mic-area" class="mic-area" hidden>
+      <button id="mic-button" class="mic-button" aria-label="Parler">
+        <span id="mic-icon">🎤</span>
+      </button>
+      <div id="mic-status" class="mic-status">Parlez</div>
+
+      <form id="text-fallback-form" class="text-fallback">
+        <input id="text-fallback-input" type="text" placeholder="Ou écrivez votre message ici…" autocomplete="off" />
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Generate mode: direct text -> cloned-voice audio, for fixing a missed
+       line in a recorded video without re-recording. Independent of the
+       conversation pipeline entirely (see backend/api/tts.py). -->
+  <main id="generate-main" class="app-main" hidden>
+    <div id="generate-error-banner" class="error-banner" hidden></div>
+
+    <div class="generate-panel">
+      <label class="generate-field">
+        Professeur
+        <select id="generate-teacher-select"></select>
+      </label>
+      <label class="generate-field">
+        Phrase à générer
+        <textarea id="generate-text-input" rows="4" placeholder="Écris la phrase exacte à générer…"></textarea>
+      </label>
+      <button id="generate-button" type="button" class="start-button">Générer l'audio</button>
+      <div id="generate-status" class="generate-status" hidden></div>
+      <div id="generate-result" class="generate-result" hidden>
+        <audio id="generate-player" controls></audio>
+        <a id="generate-download" class="generate-download" download>Télécharger le fichier audio</a>
+      </div>
+    </div>
+  </main>
+
+  <audio id="player" hidden></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>

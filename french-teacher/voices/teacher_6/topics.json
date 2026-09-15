@@ -1,0 +1,102 @@
+[
+  {
+    "id": "grenoble",
+    "label": "Grenoble",
+    "keywords": ["grenoble", "alpes", "montagnes"],
+    "prompt_hint": "Audrey vient de Grenoble et aime parler de sa ville, entourée par les Alpes.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Grenoble se trouve en France, ou en Italie ?",
+          "expected_answers": ["france", "la france"]
+        },
+        {
+          "question": "Grenoble est entourée par quelles montagnes : les Alpes, ou les Pyrénées ?",
+          "expected_answers": ["alpes", "les alpes"]
+        },
+        {
+          "question": "Aimerais-tu visiter Grenoble : oui, ou non ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  },
+  {
+    "id": "villes-francaises",
+    "label": "Villes françaises",
+    "keywords": ["ville", "villes", "france", "voyage"],
+    "prompt_hint": "Audrey aime comparer et discuter des différentes villes de France.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Quelle est la capitale de la France : Paris, ou Lyon ?",
+          "expected_answers": ["paris"]
+        },
+        {
+          "question": "Comment dit-on « city » en français : une ville, ou un pays ?",
+          "expected_answers": ["ville", "une ville"]
+        },
+        {
+          "question": "Quelle est ta ville française préférée : Paris, Lyon, ou Marseille ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  },
+  {
+    "id": "connaissances-villes-france",
+    "label": "Connaissances générales sur les villes de France",
+    "keywords": ["capitale", "région", "population", "histoire de la ville"],
+    "prompt_hint": "Audrey partage volontiers des anecdotes et des faits généraux sur les villes de France (histoire, régions, curiosités).",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Quelle ville française est connue pour la tour Eiffel : Paris, ou Nice ?",
+          "expected_answers": ["paris"]
+        },
+        {
+          "question": "Quelle ville française est connue pour son équipe de football, l'OM : Marseille, ou Bordeaux ?",
+          "expected_answers": ["marseille"]
+        },
+        {
+          "question": "Comment dit-on « region » en français : une région, ou une rue ?",
+          "expected_answers": ["région", "une région"]
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  },
+  {
+    "id": "photographie",
+    "label": "Photographie",
+    "keywords": ["photo", "photographie", "appareil photo", "photographe"],
+    "prompt_hint": "Audrey est passionnée de photographie et aime en parler.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Comment appelle-t-on l'objet qui sert à prendre des photos : un appareil photo, ou un téléphone ?",
+          "expected_answers": ["appareil photo", "un appareil photo", "appareil"]
+        },
+        {
+          "question": "Aimes-tu prendre des photos : oui, ou non ?",
+          "expected_answers": []
+        },
+        {
+          "question": "Comment dit-on « picture » en français : une photo, ou une lettre ?",
+          "expected_answers": ["photo", "une photo", "image", "une image"]
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  }
+]

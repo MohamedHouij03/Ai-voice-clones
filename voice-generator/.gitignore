@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# Generated narration clips -- these are the tool's actual deliverables, so
+# unlike the french-teacher project's ephemeral session audio, nothing here
+# auto-deletes; clear it out yourself when you no longer need old generations.
+output/
+
+# Voice reference recordings must never be committed without explicit
+# authorization tracking; keep the directory structure but not the audio.
+voices/**/*.wav
+!voices/**/.gitkeep

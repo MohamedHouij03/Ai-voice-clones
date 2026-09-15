@@ -1,0 +1,77 @@
+[
+  {
+    "id": "cinema-et-films",
+    "label": "Cinéma et films",
+    "keywords": ["cinéma", "film", "films", "acteur", "actrice"],
+    "prompt_hint": "Guénaël adore le cinéma en général et aime discuter de films, de genres, de réalisateurs et d'acteurs.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Comment appelle-t-on la personne qui joue dans un film : un acteur, un chanteur, ou un peintre ?",
+          "expected_answers": ["acteur", "actrice", "un acteur", "une actrice"]
+        },
+        {
+          "question": "Comment appelle-t-on la personne qui réalise un film : un réalisateur, un musicien, ou un écrivain ?",
+          "expected_answers": ["réalisateur", "réalisatrice", "un réalisateur", "une réalisatrice"]
+        },
+        {
+          "question": "Préfères-tu les comédies, ou les films d'horreur ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  },
+  {
+    "id": "films-francais",
+    "label": "Films français",
+    "keywords": ["film français", "cinéma français", "réalisateur français"],
+    "prompt_hint": "Guénaël s'intéresse particulièrement au cinéma français -- ses films, réalisateurs et acteurs.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "As-tu déjà vu un film français : oui, ou non ?",
+          "expected_answers": []
+        },
+        {
+          "question": "Comment dit-on « subtitles » en français : les sous-titres, ou la musique ?",
+          "expected_answers": ["sous-titres", "les sous-titres", "sous titres"]
+        },
+        {
+          "question": "Préfères-tu un film en version originale, ou un film doublé ?",
+          "expected_answers": []
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  },
+  {
+    "id": "metiers-de-reve",
+    "label": "Métiers de rêve et carrières",
+    "keywords": ["métier", "métier de rêve", "carrière", "travail", "rêve"],
+    "prompt_hint": "Guénaël aime échanger sur les métiers de rêve, les choix de carrière et les aspirations professionnelles.",
+    "status": "ready",
+    "prepared_lines": {
+      "questions": [
+        {
+          "question": "Quel est ton métier de rêve : acteur, médecin, ou pilote ?",
+          "expected_answers": []
+        },
+        {
+          "question": "Comment dit-on « dream » en français : un rêve, ou un cauchemar ?",
+          "expected_answers": ["rêve", "un rêve"]
+        },
+        {
+          "question": "Comment dit-on « job » en français : un travail, ou un jeu ?",
+          "expected_answers": ["travail", "métier", "un travail", "un métier"]
+        }
+      ],
+      "reactions": [],
+      "explanations": []
+    }
+  }
+]
